@@ -1,4 +1,4 @@
-package org.example;
+package org.example.sem1;
 
 public class Cat extends Animal{
     private String color;
