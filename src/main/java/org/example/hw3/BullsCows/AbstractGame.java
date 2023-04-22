@@ -1,7 +1,15 @@
 package org.example.hw3.BullsCows;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 import java.util.Random;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 
 public abstract class AbstractGame implements GameInterface{
     Integer sizeWord;
@@ -10,12 +18,30 @@ public abstract class AbstractGame implements GameInterface{
     GameStatus gameStatus = GameStatus.INIT;
 
     @Override
-    public void start(int sizeWord, int tries) {
+    public void start(Integer sizeWord, Integer tries) {
         this.sizeWord = sizeWord;
         this.tries = tries;
         word = generateWord();
         this.gameStatus = GameStatus.START;
 
+    }
+
+    public void setTries(int tries) {
+        this.tries = tries;
+    }
+
+    public AbstractGame(Integer sizeWord) {
+        this.sizeWord = sizeWord;
+    }
+
+    @Override
+    public void stop() {
+        this.gameStatus = GameStatus.LOSE;
+    }
+
+    @Override
+    public void win() {
+        this.gameStatus = GameStatus.WIN;
     }
 
     @Override
@@ -36,7 +62,7 @@ public abstract class AbstractGame implements GameInterface{
 
     @Override
     public GameStatus getGameStatus() {
-        return null;
+        return this.gameStatus;
     }
     private String generateWord(){
         Random random = new Random();

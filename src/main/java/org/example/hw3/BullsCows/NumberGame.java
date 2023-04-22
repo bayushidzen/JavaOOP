@@ -12,4 +12,9 @@ public class NumberGame extends AbstractGame{
         }
         return charList;
     }
+
+    @Override
+    public Integer getSizeOfWord() {
+        return sizeWord;
+    }
 }
