@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface Searchable {
     List<Book> findBookByAuthor(String author);
-
+    List<Book> findBookByGenre(BookGenre bookGenre);
 
 }

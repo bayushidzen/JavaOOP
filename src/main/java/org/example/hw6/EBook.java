@@ -10,8 +10,8 @@ public class EBook extends Book{
     String format;
     Double size;
 
-    public EBook(String name, String author, Integer year, Integer pages, String publisher, String format, Double size) {
-        super(name, author, year, pages, publisher);
+    public EBook(String name, String author, Integer year, Integer pages, String publisher, BookGenre bookGenre, String format, Double size) {
+        super(name, author, year, pages, publisher, bookGenre);
         this.format = format;
         this.size = size;
     }

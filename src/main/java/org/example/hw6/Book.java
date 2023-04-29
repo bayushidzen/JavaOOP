@@ -13,5 +13,5 @@ public class Book {
     private Integer year;
     private Integer pages;
     private String publisher;
-
+    private BookGenre bookGenre;
 }

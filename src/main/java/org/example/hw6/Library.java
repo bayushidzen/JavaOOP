@@ -19,6 +19,18 @@ public class Library implements Searchable {
         }
         return searchResult;
     }
+
+    @Override
+    public List<Book> findBookByGenre(BookGenre bookGenre) {
+        List<Book> searchResult = new ArrayList<>();
+        for (Book b: allBooks) {
+            if(b.getBookGenre().getGenreName().equals(bookGenre.getGenreName())){
+                searchResult.add(b);
+            }
+        }
+        return searchResult;
+    }
+
     public void setBook(Book book){
         allBooks.add(book);
     }
