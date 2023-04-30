@@ -14,7 +14,7 @@ public class Order {
     Integer id;
     Client client;
     LocalDate date;
-    LocalTime time;
+    //LocalTime time;
     Product product;
     Integer amount;
 

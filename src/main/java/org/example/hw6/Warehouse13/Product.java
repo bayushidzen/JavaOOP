@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product {
-    Integer id;
-    String name;
+public class Product extends Nomenclature {
     Integer amount;
     Integer price;
 

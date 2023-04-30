@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Client {
-    Integer id;
-    String name;
-    String address;
-    Integer telephone;
-    String email;
+    private Integer id;
+    private String name;
+    private String address;
+    private Integer telephone;
+    private String email;
 
 }
